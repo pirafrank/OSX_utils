@@ -16,7 +16,7 @@ Clone the repo or download the .zip. Then double clic to install the workflow yo
 want.
 
 ### License
-The workflows in this repository are released under the GNU GPLv3 License by Francesco Pira (francescopira.me@gmail.com, pirafrank.github.io). You can read the terms of the license [here](http://www.gnu.org/licenses/gpl-3.0.html).
+The workflows in this repository are released under the GNU GPLv3 License by Francesco Pira (francescopira[dot]me[at]gmail[dot]com, pirafrank.github.io). You can read the terms of the license [here](http://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Documentation
 
