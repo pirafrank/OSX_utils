@@ -12,7 +12,11 @@ You can get both [here](http://www.alfredapp.com).
 Unfortunately, Alfred only runs on OS X (Snow Leopard and above). I wish there'd be something like it on Linux.
 
 ### Installation
-Clone the repo or download the .zip. Then double clic to install the workflow you want.
+Clone the repo or download the .zip. Then double clic to install the workflow you 
+want.
+
+### License
+The workflows in this repository are released under the GNU GPLv3 License by Francesco Pira (francescopira.me@gmail.com, pirafrank.github.io). You can read the terms of the license [here](http://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Documentation
 
