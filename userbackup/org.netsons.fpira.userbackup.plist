@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.netsons.fpira.userbackup</string>
+	<key>Program</key>
+	<string>/usr/local/bin/userbackup</string>
+     <key>RunAtLoad</key>
+     <false/>
+     <key>StartCalendarInterval</key>
+     <dict>
+          <key>Minute</key>
+          <integer>01</integer>
+          <key>Hour</key>
+          <integer>23</integer>
+     </dict>
+     <!--
+     <key>StartInterval</key>
+     <integer>60</integer>
+     -->
+</dict>
+</plist>
