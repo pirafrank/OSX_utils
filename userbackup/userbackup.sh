@@ -24,9 +24,10 @@
 ################################################################################
 
 # NOTES
-# Please symlink the .user_backups folder to your Dropbox, Google Drive, etc. folder
+#
+# Please set BACKUP_PATH to a subfolder in your Dropbox, Google Drive, etc. folder
 # to feature cloud sync. 
-
+#
 # Be aware that if you do not want some files to sync (e.g. you're 
 # worried about privacy of ssh folder and keys) you can comment those ones out 
 # in the proper section.
@@ -59,8 +60,8 @@ if [[ ! -d $BACKUP_PATH ]]; then
 fi
 
 cd ${TMP_PATH}
-mkdir ${DATE}
-cd ${DATE}
+mkdir "${COMPUTER_NAME}_{DATE}"
+cd "${COMPUTER_NAME}_{DATE}"
 
 ###################################################################################
 # Backup section - comment out only what you don't need!
@@ -115,15 +116,14 @@ date | ls -l "${HOME}/Library/Screen Savers" > user_installed_screensavers.txt
 ###################################################################################
 # Script footer - Do NOT touch this!
 
-# preparing destination folder
-cd ${BACKUP_PATH}
-mkdir ${DATE}
-
-# gzipping and storing
-tar -zcf "${BACKUP_PATH}/${DATE}/${COMPUTER_NAME}_${DATE}.tar.gz" "${TMP_PATH}/${DATE}"
+mkdir "${BACKUP_PATH}/${DATE}"
+cd ${TMP_PATH}
+tar -zcf "${COMPUTER_NAME}_${DATE}.tar.gz" "${COMPUTER_NAME}_{DATE}"
+mv "${COMPUTER_NAME}_${DATE}.tar.gz" "${BACKUP_PATH}/${DATE}/"
 
 # cleaning up...
 sleep 1
+cd ${BACKUP_PATH}
 rotate-backups --hourly=${N_HOURLY} --daily=${N_DAILY} --weekly=${N_WEEKLY} --monthly=${N_MONTHLY} --yearly=${N_YEARLY} . > /dev/null 2>&1
 rm -rf ${TMP_PATH}
 
