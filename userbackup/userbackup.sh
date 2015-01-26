@@ -31,30 +31,39 @@
 # worried about privacy of ssh folder and keys) you can comment those ones out 
 # in the proper section.
 
-# INSTALLATION
-# cd to the script folder
-# sudo cp userbackup.sh /usr/local/bin/userbackup
 
-# USAGE
-# $ userbackup
+###################################################################################
+# User's settings
 
-# UNINSTALL
-# sudo rm /usr/local/bin/userbackup
+COMPUTER_NAME="rMBP"
+BACKUP_PATH="${HOME}/Documents/user_backups"
+# Number of backups to keep
+N_HOURLY="0"
+N_DAILY="7"
+N_WEEKLY="4"
+N_MONTHLY="6"
+N_YEARLY="2"
 
+###################################################################################
+# Script header - Do NOT touch this!
 
-# variables
-USER_PATH="/Users/$(whoami)"
-BACKUP_PATH="/Users/$(whoami)/Documents/user_backups"
+TMP_PATH="${HOME}/.tmp_ub"
 DATE=$(date +%Y-%m-%d_%H.%M)
 
-# checking if folder exists otherwise it and its ancestors are created
+if [[ ! -d $TMP_PATH ]]; then
+     mkdir -p -m 700 $TMP_PATH
+fi
+
 if [[ ! -d $BACKUP_PATH ]]; then
      mkdir -p $BACKUP_PATH
 fi
 
-cd $BACKUP_PATH
-mkdir $DATE
-cd $DATE
+cd ${TMP_PATH}
+mkdir ${DATE}
+cd ${DATE}
+
+###################################################################################
+# Backup section - comment out only what you don't need!
 
 # save app list
 date | ls -l /Applications/ > installed_apps.txt
@@ -75,45 +84,51 @@ date | npm list -g --depth=0 > npm_installed.txt
 date | gem list > gem_installed.txt
 
 # backing up user configuration files
-cp $USER_PATH/.bash_profile ./bash_profile
-cp $USER_PATH/.bashrc ./bashrc
-cp $USER_PATH/.profile ./profile
+cp ${HOME}/.bash_profile ./bash_profile
+cp ${HOME}/.bashrc ./bashrc
+cp ${HOME}/.profile ./profile
 
 # ssh keys and configuration backup
 mkdir ./ssh
-cp -rf $USER_PATH/.ssh/ ./ssh
+cp -rf ${HOME}/.ssh/ ./ssh
 
 # backing up git configuration files
-cp $USER_PATH/.gitconfig ./gitconfig
-cp $USER_PATH/.gitignore_global ./gitignore_global
+cp ${HOME}/.gitconfig ./gitconfig
+cp ${HOME}/.gitignore_global ./gitignore_global
 
 # backing up /etc/hosts
 cp /etc/hosts ./hosts
 
 # backing up sublime text 3 stuff
-cp -rf "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages/" ./sublime-text-packages
-cp -rf "/Users/$(whoami)/Library/Application Support/Sublime Text 3/Installed Packages/" ./sublime-text-installed-packages
+cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Packages/" ./sublime-text-packages
+cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/" ./sublime-text-installed-packages
 
 # list of installed quicklook plugins
-date | ls -l $USER_PATH/Library/QuickLook > user_installed_quicklook_plugins.txt
+date | ls -l ${HOME}/Library/QuickLook > user_installed_quicklook_plugins.txt
 
 # list of installed fonts
-date | ls -l $USER_PATH/Library/fonts > user_installed_fonts.txt
+date | ls -l ${HOME}/Library/fonts > user_installed_fonts.txt
 
 # list of installed screen savers
-date | ls -l "$USER_PATH/Library/Screen Savers" > user_installed_screensavers.txt
+date | ls -l "${HOME}/Library/Screen Savers" > user_installed_screensavers.txt
 
-# keeping the backup folder clean...
-cd $BACKUP_PATH
-rotate-backups --hourly=0 --daily=7 --weekly=4 --monthly=6 --yearly=2 . > /dev/null 2>&1
+###################################################################################
+# Script footer - Do NOT touch this!
+
+# preparing destination folder
+cd ${BACKUP_PATH}
+mkdir ${DATE}
+
+# gzipping and storing
+tar -zcf "${BACKUP_PATH}/${DATE}/${COMPUTER_NAME}_${DATE}.tar.gz" "${TMP_PATH}/${DATE}"
+
+# cleaning up...
+sleep 1
+rotate-backups --hourly=${N_HOURLY} --daily=${N_DAILY} --weekly=${N_WEEKLY} --monthly=${N_MONTHLY} --yearly=${N_YEARLY} . > /dev/null 2>&1
+rm -rf ${TMP_PATH}
 
 # notify backup complete
 /usr/bin/osascript -e 'display notification "Backup completed." with title "User Backup script"'
-
-
-
-
-
 
 
 
