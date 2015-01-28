@@ -17,10 +17,6 @@ But I found some tasks to be missing on Alfred so I decided to write the plugins
 
 ## Requirements
 
-#### Battery Life Extender
-
-OS X 10.8 or above should be enough! Tested on Mavericks.
-
 #### nosleep (CLI)
 
 It should work on OS X 10.6 and above. Tested on Mavericks.
@@ -37,16 +33,6 @@ You can get both [here](http://www.alfredapp.com).
 Unfortunately, Alfred only runs on OS X (Snow Leopard and above). I wish there'd be something like it on Linux.
 
 ## Installation
-
-#### Battery Life Extender
-
-Step 1: `sudo cp batterylifeextender.sh /usr/local/bin/batterylifeextender`
-
-Step 2: `sudo chmod +x /usr/local/bin/batterylifeextender`
-
-Step 3: `cp com.fpira.batterylifeextender.plist ~/Library/LaunchAgents/`
-
-Step 4: `launchctl load ~/Library/LaunchAgents/com.fpira.batterylifeextender.plist `
 
 #### nosleep (CLI)
 
