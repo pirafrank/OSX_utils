@@ -52,6 +52,10 @@ Step 3: cp *nameoftheplistfile.plist* ~/Library/LaunchAgents/
 
 Step 4: launchctl load ~/Library/LaunchAgents/*nameoftheplistfile.plist*
 
+#### Aliases
+
+Paste the content of your alias file of choice to the bottom of ~/.bash_profile.
+
 #### Alfred workflows
 
 Clone the repo or download the .zip. Then double clic to install the workflow you 
