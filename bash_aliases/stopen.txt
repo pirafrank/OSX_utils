@@ -1,0 +1,1 @@
+alias stopen='open -a "/Applications/Sublime Text.app"'
