@@ -91,7 +91,8 @@ cp ${HOME}/.profile ./profile
 
 # ssh keys and configuration backup
 mkdir ./ssh
-cp -rf ${HOME}/.ssh/ ./ssh
+cp ${HOME}/.ssh/config ./ssh/config
+cp ${HOME}/.ssh/known_hosts ./ssh/known_hosts
 
 # backing up git configuration files
 cp ${HOME}/.gitconfig ./gitconfig
