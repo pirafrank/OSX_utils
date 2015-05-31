@@ -1,9 +1,12 @@
 #!/bin/bash
 
 #############################################################################
-# nosleep keeps your mac awake
+# nosleep <https://github.com/pirafrank/OSX_utils/>
+# Easy way to keep your mac awake
 #
-# Copyright (C) 2015 Francesco Pira <francescopira.me@gmail.com> 
+# Copyright (C) 2015 Francesco Pira <dev@fpira.com>
+#
+# This file is part of OSX_utils
 #
 # This script is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,8 +20,6 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this script.  If not, see <http://www.gnu.org/licenses/>.
-
-# developer's website: fpira.com
 #
 #############################################################################
 
