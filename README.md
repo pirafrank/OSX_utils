@@ -3,7 +3,8 @@
 ## Why
 
 #### About the project
-As a developer and mac user I have some needs I satisfied with these utilities.
+
+As a developer and Mac user I have some needs to speed up my workflow. That's why a coded these utilities. And because *sharing is caring* I've put them on a repo.
 
 You don't need to be a developer to find some of them useful, although you may be if you're reading this!
 
@@ -17,13 +18,21 @@ But I found some tasks to be missing on Alfred so I decided to write the plugins
 
 ## Requirements
 
+#### free4mac
+
+It should work with OS X 10.8+. Tested on Yosemite.
+
+#### macsleep
+
+It should work with OS X 10.8+. Tested on Yosemite. It may work on Lion.
+
 #### nosleep (CLI)
 
-It should work on OS X 10.6 and above. Tested on Mavericks.
+It should work on OS X 10.6 and above. Tested on Mavericks and Yosemite.
 
 #### userbackup
 
-Teorically every OS X version. Tested on Mavericks.
+It teorically works with every OS X version. Tested on Mavericks and Yosemite.
 
 #### Alfred workflows
 
@@ -31,6 +40,10 @@ Please note these are just plugins. You'll need Alfred 2.2+ and its Powerpack.
 You can get both [here](http://www.alfredapp.com).
 
 Unfortunately, Alfred only runs on OS X (Snow Leopard and above). I wish there'd be something like it on Linux.
+
+#### OS X Services
+
+They should work with OS X 10.8+. Tested on Mavericks and Yosemite. Some of them may work with Lion.
 
 ## Installation
 
