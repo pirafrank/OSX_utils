@@ -102,8 +102,7 @@ cp ${HOME}/.gitignore_global ./gitignore_global
 cp /etc/hosts ./hosts
 
 # backing up sublime text 3 stuff
-cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Packages/" ./sublime-text-packages
-cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/" ./sublime-text-installed-packages
+cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/User/" ./sublime-text-installed-packages-user
 
 # list of installed quicklook plugins
 date | ls -l ${HOME}/Library/QuickLook > user_installed_quicklook_plugins.txt
