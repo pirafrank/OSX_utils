@@ -15,7 +15,7 @@
 	<key>cornerRoundness</key>
 	<integer>0</integer>
 	<key>credits</key>
-	<string>Francesco Pira</string>
+	<string>pirafrank</string>
 	<key>imageStyle</key>
 	<integer>3</integer>
 	<key>name</key>
@@ -43,7 +43,7 @@
 	ZmZmg7JQ6j6DslDqPoOyUOo+AYY=
 	</data>
 	<key>resultSubtextFont</key>
-	<string>Helvetica</string>
+	<string>Helvetica Neue</string>
 	<key>resultSubtextFontSize</key>
 	<integer>2</integer>
 	<key>resultTextColor</key>
@@ -52,7 +52,7 @@
 	ZmZmg7KQDT6D1Sq6PIP2eNA7AYY=
 	</data>
 	<key>resultTextFont</key>
-	<string>Helvetica</string>
+	<string>Helvetica Neue</string>
 	<key>resultTextFontSize</key>
 	<integer>4</integer>
 	<key>scrollbarColor</key>
@@ -66,7 +66,7 @@
 	ZmZmAQEBAYY=
 	</data>
 	<key>searchFont</key>
-	<string>Helvetica</string>
+	<string>Helvetica Neue</string>
 	<key>searchFontSize</key>
 	<integer>4</integer>
 	<key>searchForegroundColor</key>
@@ -98,7 +98,7 @@
 	ZmZmgyBk1zqD27YNPIMJ0Jg7AYY=
 	</data>
 	<key>shortcutFont</key>
-	<string>Helvetica</string>
+	<string>Helvetica Neue</string>
 	<key>shortcutFontSize</key>
 	<integer>3</integer>
 	<key>shortcutSelectedColor</key>
