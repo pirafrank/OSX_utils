@@ -60,8 +60,8 @@ if [[ ! -d $BACKUP_PATH ]]; then
 fi
 
 cd ${TMP_PATH}
-mkdir "${COMPUTER_NAME}_{DATE}"
-cd "${COMPUTER_NAME}_{DATE}"
+mkdir "${COMPUTER_NAME}_${DATE}"
+cd "${COMPUTER_NAME}_${DATE}"
 
 ###################################################################################
 # Backup section - comment out only what you don't need!
@@ -118,7 +118,7 @@ date | ls -l "${HOME}/Library/Screen Savers" > user_installed_screensavers.txt
 
 mkdir "${BACKUP_PATH}/${DATE}"
 cd ${TMP_PATH}
-tar -zcf "${COMPUTER_NAME}_${DATE}.tar.gz" "${COMPUTER_NAME}_{DATE}"
+tar -zcf "${COMPUTER_NAME}_${DATE}.tar.gz" "${COMPUTER_NAME}_${DATE}"
 mv "${COMPUTER_NAME}_${DATE}.tar.gz" "${BACKUP_PATH}/${DATE}/"
 
 # cleaning up...
