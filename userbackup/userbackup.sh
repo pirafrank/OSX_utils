@@ -107,6 +107,9 @@ cp ${HOME}/.gitignore_global ./gitignore_global
 # backing up /etc/hosts
 cp /etc/hosts ./hosts
 
+# backup ~/.config
+cp ~/.config ./home.config
+
 # backing up sublime text 3 stuff
 cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" ./sublime-text-installed-packages-user
 
