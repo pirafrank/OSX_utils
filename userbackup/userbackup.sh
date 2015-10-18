@@ -67,22 +67,28 @@ cd "${COMPUTER_NAME}_${DATE}"
 # Backup section - comment out only what you don't need!
 
 # save app list
-date | ls -l /Applications/ > installed_apps.txt
+date > installed_apps.txt
+ls -l /Applications/ >> installed_apps.txt
 
 # save user-installed software
-date | ls -l /usr/local/bin/ > installed_usr_local_bin.txt
+date > installed_usr_local_bin.txt
+ls -l /usr/local/bin/ >> installed_usr_local_bin.txt
 
 # save installed port list
-date | port installed > installed_ports.txt
+date > installed_ports.txt
+port installed >> installed_ports.txt
 
 # save installed pip package list
-date | pip list > pip_installed.txt
+date > pip_installed.txt
+pip list >> pip_installed.txt
 
 # save list of globally installed npm packages
-date | npm list -g --depth=0 > npm_installed.txt
+date > npm_installed.txt
+npm list -g --depth=0 >> npm_installed.txt
 
 # save installed gems list
-date | gem list > gem_installed.txt
+date > gem_installed.txt
+gem list >> gem_installed.txt
 
 # backing up user configuration files
 cp ${HOME}/.bash_profile ./bash_profile
@@ -105,13 +111,16 @@ cp /etc/hosts ./hosts
 cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" ./sublime-text-installed-packages-user
 
 # list of installed quicklook plugins
-date | ls -l ${HOME}/Library/QuickLook > user_installed_quicklook_plugins.txt
+date > user_installed_quicklook_plugins.txt
+ls -l ${HOME}/Library/QuickLook >> user_installed_quicklook_plugins.txt
 
 # list of installed fonts
-date | ls -l ${HOME}/Library/fonts > user_installed_fonts.txt
+date > user_installed_fonts.txt
+ls -l ${HOME}/Library/fonts >> user_installed_fonts.txt
 
 # list of installed screen savers
-date | ls -l "${HOME}/Library/Screen Savers" > user_installed_screensavers.txt
+date > user_installed_screensavers.txt
+ls -l "${HOME}/Library/Screen Savers" > user_installed_screensavers.txt
 
 ###################################################################################
 # Script footer - Do NOT touch this!
