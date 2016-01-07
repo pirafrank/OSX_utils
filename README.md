@@ -36,7 +36,7 @@ It teorically works with every OS X version. Tested on Mavericks and Yosemite.
 
 #### Alfred workflows
 
-Please note these are just plugins. You'll need Alfred 2.2+ and its Powerpack.
+Please note these are just plugins. You'll need Alfred 2.6+ and its Powerpack.
 You can get both [here](http://www.alfredapp.com).
 
 Unfortunately, Alfred only runs on OS X (Snow Leopard and above). I wish there'd be something like it on Linux.
