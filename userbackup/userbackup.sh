@@ -74,19 +74,32 @@ ls -l /Applications/ >> installed_apps.txt
 date > installed_usr_local_bin.txt
 ls -l /usr/local/bin/ >> installed_usr_local_bin.txt
 
-# save installed port list
+# save installed port list (Macports)
 date > installed_ports.txt
 port installed >> installed_ports.txt
 
 # save installed pip package list
 date > pip_installed.txt
+echo "Python version is:" >> pip_installed.txt
+python --version >> pip_installed.txt
 pip list >> pip_installed.txt
 
-# save list of globally installed npm packages
+# save list of node versions (nvm)
+date > nvm_versions.txt
+echo "### io.js versions ###" >> nvm_versions.txt
+ls -l ~/.nvm/versions/io.js/ >> nvm_versions.txt
+echo "### node versions ###" >> nvm_versions.txt
+ls -l ~/.nvm/versions/node/ >> nvm_versions.txt
+
+# save list of globally installed npm packages for default node release
 date > npm_installed.txt
 npm list -g --depth=0 >> npm_installed.txt
 
-# save installed gems list
+# save list of ruby versions (rvm)
+date > rvm_installed.txt
+rvm list >> rvm_installed.txt
+
+# save list of installed gems for default ruby release
 date > gem_installed.txt
 gem list >> gem_installed.txt
 
@@ -95,20 +108,20 @@ cp ${HOME}/.bash_profile ./bash_profile
 cp ${HOME}/.bashrc ./bashrc
 cp ${HOME}/.profile ./profile
 
-# ssh keys and configuration backup
+# backing up ssh keys and configuration
 mkdir ./ssh
 cp ${HOME}/.ssh/config ./ssh/config
 cp ${HOME}/.ssh/known_hosts ./ssh/known_hosts
 
-# backing up git configuration files
+# backing up user global git configuration files
 cp ${HOME}/.gitconfig ./gitconfig
 cp ${HOME}/.gitignore_global ./gitignore_global
 
+# backup user settings ~/.config
+cp ~/.config ./home.config
+
 # backing up /etc/hosts
 cp /etc/hosts ./hosts
-
-# backup ~/.config
-cp ~/.config ./home.config
 
 # backing up sublime text 3 stuff
 cp -rf "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" ./sublime-text-installed-packages-user
