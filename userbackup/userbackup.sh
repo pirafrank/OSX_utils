@@ -107,6 +107,9 @@ gem list >> gem_installed.txt
 cp ${HOME}/.bash_profile ./bash_profile
 cp ${HOME}/.bashrc ./bashrc
 cp ${HOME}/.profile ./profile
+cp ${HOME}/.zshrc ./zshrc
+cp ${HOME}/.zshenv ./zshenv
+cp ${HOME}/.zlogin ./zlogin
 
 # backing up vim files and config
 cp -r ${HOME}/.vim ./vim
