@@ -1,0 +1,1 @@
+alias mou='open -a "/Applications/Mou.app"'

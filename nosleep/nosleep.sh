@@ -23,6 +23,13 @@
 #
 ################################################################################
 
+if [[ $# != 1 ]]; then
+    echo "nosleep - Prevent your Mac from sleeping"
+    echo "Usage: nosleep [minutes]"
+    echo ""
+    exit 1
+fi
+
 let "MIN=$1 * 60"
 echo "The system will stay awake for $1 minutes since now ($(date))."
 echo "Do NOT close this terminal!" 

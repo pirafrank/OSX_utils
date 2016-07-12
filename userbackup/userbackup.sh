@@ -26,10 +26,10 @@
 # NOTES
 #
 # Please set BACKUP_PATH to a subfolder in your Dropbox, Google Drive, etc. folder
-# to feature cloud sync. 
+# to feature cloud sync.
 #
-# Be aware that if you do not want some files to sync (e.g. you're 
-# worried about privacy of ssh folder and keys) you can comment those ones out 
+# Be aware that if you do not want some files to sync (e.g. you're
+# worried about privacy of ssh folder and keys) you can comment those ones out
 # in the proper section.
 
 
@@ -107,6 +107,13 @@ gem list >> gem_installed.txt
 cp ${HOME}/.bash_profile ./bash_profile
 cp ${HOME}/.bashrc ./bashrc
 cp ${HOME}/.profile ./profile
+cp ${HOME}/.zshrc ./zshrc
+cp ${HOME}/.zshenv ./zshenv
+cp ${HOME}/.zlogin ./zlogin
+
+# backing up vim files and config
+cp -r ${HOME}/.vim ./vim
+cp ${HOME}/.vimrc ./vimrc
 
 # backing up ssh keys and configuration
 mkdir ./ssh
