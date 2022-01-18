@@ -1,5 +1,15 @@
 # OSX utils
 
+---
+
+**ARCHIVED REPO**
+
+This repo has been archived. Scripts and new content can be found in my [dotfiles](https://github.com/pirafrank/dotfiles) repository.
+
+Original content follows.
+
+---
+
 As a developer and Mac user I have some needs to speed up my workflow. That's why a coded these utilities. And because *sharing is caring* I've put them on a repo.
 
 You don't need to be a developer to find some of them useful, although you may be if you're reading this!
